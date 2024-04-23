@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/layout/activity_color_picker.xml -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <Button
+        android:id="@+id/colorButton"
+        android:layout_width="400sp"
+        android:layout_height="100sp"
+        android:text="Выбрать цвет кнопки"
+        android:layout_gravity="center"/>
+    <Button
+        android:id="@+id/colorButton2"
+        android:layout_width="400sp"
+        android:layout_height="100sp"
+        android:text="Выбрать цвет фона"
+        android:layout_gravity="center"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/returnButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Вернуться в меню"
+        android:layout_gravity="center"/>
+
+</LinearLayout>

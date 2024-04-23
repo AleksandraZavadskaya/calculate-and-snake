@@ -1,0 +1,195 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkgreen">
+
+
+    <TextView
+        android:id="@+id/scoreTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/darkgreen"
+        android:text="@string/scoreTextView"
+        android:textColor="@color/white"
+        android:textSize="24sp" />
+
+
+
+    <!-- Контейнер для игрового поля и элементов -->
+    <FrameLayout
+        android:id="@+id/gameFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        android:layout_above="@+id/controlLayout"
+        android:layout_below="@id/scoreTextView">
+
+        <!-- Фон игрового поля -->
+        <ImageView
+            android:id="@+id/gameBackgroundImageView"
+            android:layout_width="match_parent"
+            android:layout_height="738dp"
+            android:scaleType="fitXY"
+            android:src="@color/lightgreen" />
+
+        <!-- Змейка -->
+
+        <!-- Еда -->
+        <LinearLayout
+            android:id="@+id/snakeLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="start"
+            android:orientation="vertical">
+
+            <!-- Голова змейки -->
+            <ImageView
+                android:id="@+id/snakeHeadImageView"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/snake_green_head" />
+
+            <!-- Тело змейки -->
+            <LinearLayout
+                android:id="@+id/snakeBodyLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+
+                android:orientation="horizontal">
+                <!-- Тело змейки будет добавлено динамически в коде -->
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/gameButton"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:backgroundTint="@color/green"
+                android:text="@string/gameButton" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/foodImageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="start|top"
+            android:src="@drawable/apple_alt" />
+        <ImageView
+            android:id="@+id/food2ImageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="start|top"
+            android:src="@drawable/apple_green" />
+        <ImageView
+            android:id="@+id/Snake2ImageView"
+            android:layout_width="400dp"
+            android:layout_height="400dp"
+            android:src="@drawable/snake2"
+
+            android:visibility="gone" />
+        <!-- Плохая еда -->
+        <ImageView
+            android:id="@+id/badfoodImageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="start|top"
+            android:src="@drawable/bomb" />
+
+    </FrameLayout>
+
+    <!-- Кнопки управления -->
+    <LinearLayout
+        android:id="@+id/controlLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/darkgreen"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!-- Кнопка поворота влево -->
+        <Button
+            android:id="@+id/leftButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/green"
+            android:text="@string/leftButton"
+            android:textSize="40sp" />
+
+        <!-- Кнопка поворота вверх -->
+        <Button
+            android:id="@+id/upButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/green"
+            android:text="@string/upButton"
+            android:textSize="40sp" />
+
+        <!-- Кнопка поворота вниз -->
+        <Button
+            android:id="@+id/downButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/green"
+            android:text="@string/downButton"
+            android:textSize="40sp" />
+
+        <!-- Кнопка поворота вправо -->
+        <Button
+            android:id="@+id/rightButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/green"
+            android:text="@string/rightButton"
+            android:textSize="40sp" />
+    </LinearLayout>
+
+    <!-- Кнопка "Начать игру" -->
+
+    <!-- Текст "Вы проиграли" -->
+    <TextView
+        android:id="@+id/gameOverTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="GAME OVER"
+        android:textSize="44sp"
+        android:textColor="@color/red"
+        android:visibility="gone" />
+
+    <!-- Кнопка "Рестарт" -->
+    <Button
+        android:id="@+id/restartButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/scoreTextView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:backgroundTint="@color/green"
+        android:text="Рестарт"
+        android:visibility="gone" />
+
+    <!-- Кнопка "Выход" -->
+    <Button
+        android:id="@+id/exitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/scoreTextView"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:backgroundTint="@color/green"
+        android:text="Выход"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/gameOverImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gameOverTextView"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/snake_green_xx"
+        android:visibility="gone" />
+</RelativeLayout>

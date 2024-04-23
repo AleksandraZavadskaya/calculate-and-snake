@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pink_text"
+    tools:context=".calculatorActivity">
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/calculate_image"
+        android:visibility="invisible"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/text_calc"
+        android:textColor="@color/pink"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/cacledit"
+        android:layout_width="300sp"
+        android:layout_height="60sp"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:hint="@string/text_hint"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:textColor="@color/purple"
+        android:textColorHint="@color/purple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/cacledit2"
+        android:layout_width="300sp"
+        android:layout_height="60sp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="@string/text_hint2"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:textColor="@color/purple"
+        android:textColorHint="@color/purple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="200sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cacledit">
+
+        <RadioButton
+            android:id="@+id/minusRadioButton"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:text="-"
+            android:textColor="@color/purple" />
+
+        <RadioButton
+            android:id="@+id/multiplyRadioButton"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:text="*"
+            android:textColor="@color/purple" />
+
+        <RadioButton
+            android:id="@+id/divideRadioButton"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:text="/"
+            android:textColor="@color/purple" />
+
+        <RadioButton
+            android:id="@+id/plusRadioButton"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:text="+"
+            android:textColor="@color/purple" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="150sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/calculateButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cacledit2" />
+
+    <Button
+        android:id="@+id/menuButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/menuButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

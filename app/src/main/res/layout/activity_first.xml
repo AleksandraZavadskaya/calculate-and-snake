@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/first"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/purple_star">
+
+    <!-- Кнопка в правом верхнем углу -->
+    <Button
+        android:id="@+id/exit_button"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:text="@string/exit_button"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/red"
+        android:layout_marginTop="16dp" />
+
+    <!-- Кнопка в центре нижней части -->
+    <Button
+        android:id="@+id/start_button"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/start_button"
+        android:textSize="34sp" />
+
+    <!-- ImageView в центре экрана, немного выше центра -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:translationY="-100dp"
+        app:srcCompat="@drawable/kot_rozoi" />
+    <ImageView
+        android:id="@+id/image_2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/mood"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:translationY="250dp"
+
+        />
+
+</RelativeLayout>

@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Крутая приложуха</string>
+    <string name="button">Калькулятор</string>
+    <string name="button2">Змейка</string>
+    <string name="button4">Цвета</string>
+    <string name="button3">Инженерный калькулятор</string>
+    <string name="exit_button">X</string>
+    <string name="start_button">НАЧАТЬ</string>
+    <string name="text_calc">КАЛЬКУЛЯТОР</string>
+    <string name="text_hint">Введите первое число</string>
+    <string name="text_hint2">Введите второе число</string>
+    <string name="calculateButton">Расчет</string>
+    <string name="menuButton">Ввернуться в меню</string>
+    <string name="gameButton">Играть</string>
+    <string name="scoreTextView">Score: 0</string>
+    <string name="leftButton">←</string>
+    <string name="rightButton">→</string>
+    <string name="upButton">↑</string>
+    <string name="downButton">↓</string>
+
+
+</resources>
